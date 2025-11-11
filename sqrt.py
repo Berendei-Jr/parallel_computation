@@ -4,6 +4,7 @@ def symbol_legandra(a, p):
     return (a**((p-1)//2))%p
 
 def tonnel_shenksa(a, p):
+    print("Тонелли-Шенкса")
     while symbol_legandra(N := randint(1, p-1), p)==1:
         pass
     print(f"{N=}")
@@ -12,7 +13,7 @@ def tonnel_shenksa(a, p):
     while t%2==0:
         t=t//2
         e+=1
-    
+
     print(f"{t=}")
     r = e
     y = (N**t)%p
@@ -46,13 +47,10 @@ def tonnel_shenksa(a, p):
             return None
         i+=1
 
-
-        
-
 def sqrt(a, m):
     if symbol_legandra(a, m)== -1:
         return None
-    
+
     if m%4==3:
         k = (m-3)//4
         x = a**(k+1)
@@ -60,7 +58,6 @@ def sqrt(a, m):
         return (x, m-x)
     elif m%4==1:
         return tonnel_shenksa(a, m)
-        
 
     return None
 

@@ -1,9 +1,8 @@
 a = 2
 b = 37
 p = 101
+
 from math import sqrt
-
-
 
 def isP(n):
     s = int(sqrt(n))
@@ -18,8 +17,6 @@ def getZUV(p, a, b):
     v = 0
     z = 1
     while 1:
-
-
         yield z, u, v
 
         if z < p//3:
@@ -42,7 +39,7 @@ def getZUV(p, a, b):
         z = a**v * b**u
         z = z%p
 
-        
+
 d = dict()
 for z, u, v in getZUV(p, a, b):
     print(u, v, z)

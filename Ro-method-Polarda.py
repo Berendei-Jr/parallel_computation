@@ -10,7 +10,7 @@ def nod(a, b):
             res = i
     return res
 
-n = 29292929
+n = 2929
 max_step = 50
 
 x = randint(0, n)
@@ -34,6 +34,3 @@ while 1:
 
 print()
 print(f"{n} = {p} * {n//p}")
-    
-
-
